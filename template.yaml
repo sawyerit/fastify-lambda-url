@@ -1,0 +1,68 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM template for deploying a Lambda function backend for the feedback Chrome extension.
+
+Parameters:
+  Environment:
+    Type: String
+
+Resources:
+  LambdaExecutionRole:
+      Type: AWS::IAM::Role
+      Properties:
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service: [lambda.amazonaws.com]
+              Action: ['sts:AssumeRole']
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+
+  FastifyFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      FunctionName:  FastifyDemoFunction
+      Handler: index.handler
+      Runtime: nodejs18.x
+      CodeUri: ./dist/
+      Role: !GetAtt LambdaExecutionRole.Arn
+      MemorySize: 512
+      Timeout: 15
+      Environment:
+        Variables:
+          ENVIRONMENT: !Sub ${Environment}
+      Tags:
+        Name: FastifyDemoFunction
+
+  LambdaFunctionUrl:
+    Type: AWS::Lambda::Url
+    Properties:
+      TargetFunctionArn: !Ref FastifyFunction
+      AuthType: NONE
+      Cors:
+        AllowOrigins:
+          - "*"
+        AllowMethods:
+          - GET
+          - POST
+        AllowHeaders:
+          - "*"
+        ExposeHeaders:
+          - access-control-allow-origin
+          - access-control-allow-methods
+        MaxAge: 0
+  LambdaFunctionUrlPermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        FunctionName: !Ref FastifyFunction
+        Principal: "*"
+        Action: lambda:InvokeFunctionUrl
+        FunctionUrlAuthType: NONE
+
+Outputs:
+  FastifyFunctionUrl:
+      Description: The URL of the Fastify Lambda Function
+      Value: !Ref LambdaFunctionUrl
