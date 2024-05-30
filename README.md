@@ -29,10 +29,8 @@
   - [ Installation](#-installation)
   - [ Usage](#-usage)
   - [ Tests](#-tests)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
+  - [ Building From Scratch](#-building-your-own-from-scratch)
 - [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
 </details>
 <hr>
 
