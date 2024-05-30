@@ -21,16 +21,16 @@
 <details>
   <summary>Table of Contents</summary><br>
 
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
-- [ Getting Started](#-getting-started)
-  - [ Installation](#-installation)
-  - [ Usage](#-usage)
-  - [ Tests](#-tests)
-  - [ Building From Scratch](#-building-your-own-from-scratch)
-- [ License](#-license)
+- [ Overview](#overview)
+- [ Features](#features)
+- [ Repository Structure](#repository-structure)
+- [ Modules](#modules)
+- [ Getting Started](#getting-started)
+  - [ Installation](#installation)
+  - [ Usage](#usage)
+  - [ Tests](#tests)
+  - [ Building From Scratch](#building-your-own-from-scratch)
+- [ License](#license)
 </details>
 <hr>
 
