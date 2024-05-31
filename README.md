@@ -145,7 +145,7 @@ This repo contains all the code needed to run the lambda locally and should be s
 
 > Run the test suite using the command below:
 > ```console
-> $ > npm run test
+> npm run test
 > ```
 
 ### Building your own from scratch
