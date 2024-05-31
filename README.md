@@ -47,7 +47,7 @@ This repo contains all the code needed to run the lambda locally and should be s
 |    | Feature          | Description |
 |----|-------------------|---------------------------------------------------------------|
 | ⚙️  | **Architecture**  | The project leverages AWS Lambda and Fastify to create a serverless web application. |
-| 🧪 | **Testing**       | Jest and ts-jest are used for testing, ensuring code reliability and robustness. Test coverage is extensive, covering both unit and integration tests. |
+| 🧪 | **Testing**       | Jest and ts-jest are used for testing, ensuring code reliability and robustness. Test coverage is minimal for example only. |
 | 📦 | **Dependencies**  | Key dependencies include Fastify, AWS Lambda, Jest, SAM CLI and other related libraries. |
 
 ---
