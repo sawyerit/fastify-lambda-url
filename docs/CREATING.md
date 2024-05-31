@@ -8,10 +8,9 @@ mkdir -p src
 mkdir -p src/tests
 npm init -y
 npm install aws-lambda @types/aws-lambda fastify @fastify/aws-lambda
-npm install --save-dev typescript jest ts-jest @types/node @types/
-jest webpack webpack-cli ts-loader
+npm install --save-dev typescript jest ts-jest @types/node @types/jest webpack webpack-cli ts-loader
 ```
-2. Add a tsconfig file:
+2. Add a tsconfig file to the root:
 ```
 {
   "compilerOptions": {
@@ -29,7 +28,7 @@ jest webpack webpack-cli ts-loader
 }
 ```
 
-3. Add a jest.config.js file:
+3. Add a jest.config.js file to the root:
 ```
 module.exports = {
   preset: 'ts-jest',
