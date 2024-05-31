@@ -115,17 +115,17 @@ This repo contains all the code needed to run the lambda locally and should be s
 > 1. Clone the fastify-lambda-url repository:
 >
 > ```console
-> $ git clone https://github.com/sawyerit/fastify-lambda-url
+> git clone https://github.com/sawyerit/fastify-lambda-url
 > ```
 >
 > 2. Change to the project directory:
 > ```console
-> $ cd fastify-lambda-url
+> cd fastify-lambda-url
 > ```
 >
 > 3. Install the dependencies:
 > ```console
-> $ > npm install
+> npm install
 > ```
 
 ###  Usage
