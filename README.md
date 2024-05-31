@@ -134,8 +134,11 @@ This repo contains all the code needed to run the lambda locally and should be s
 
 > Run fastify-lambda-url using the command below:
 > ```console
-> $ > npm run build
-> $ > npm run start
+> npm run build
+> ```
+> and then
+> ```
+> npm run start
 > ```
 
 ###  Tests
