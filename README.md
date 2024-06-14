@@ -36,7 +36,7 @@
 
 ##  Overview
 
-This repo is supporting code for the Medium article ["AWS Lambda Function URLs with SAM Local and Postman"](http://todo). In the article, we look specifically at invoking a local Lambda Function via URL using Postman. To simplify the approach we utilize Fastify to quickly set up an API in our Lambda, and include a SAM template to facilitate the local deployment and execution of the function. 
+This repo is supporting code for the Medium article ["AWS Lambda Function URLs with SAM Local and Postman"](https://medium.com/@shane.sawyer/aws-lambda-function-urls-with-sam-local-and-postman-8554e1011ae0). In the article, we look specifically at invoking a local Lambda Function via URL using Postman. To simplify the approach we utilize Fastify to quickly set up an API in our Lambda, and include a SAM template to facilitate the local deployment and execution of the function. 
 
 This repo contains all the code needed to run the lambda locally and should be sufficient for deploying to AWS. 
 
